@@ -1,7 +1,9 @@
 package cn.iocoder.springboot.lab39.skywalkingdemo;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -45,6 +47,14 @@ public class Application {
 //        }
 
         SpringApplication.run(Application.class, args);
+    }
+
+    public CommandLineRunner commandLineRunner(ApplicationContext context){
+        return new CommandLineRunner() {
+            @Override
+            public void run(String... args) throws Exception {
+            }
+        };
     }
 
 }
